@@ -12,6 +12,7 @@ let geomURL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWFhn0ci-adK2ozaTApXmxdphm7vxbnDciZt_JtLsQM4_DqyqlfL0W0OibbCwWyNPnkfHqPo9sBVuf/pub?output=csv";
 let pointsURL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vQiFVcgL3XVFd9rdu19dYt6qQfNipyMwQ7hb5y1LR_HH6OH02OoahCBU8bw1CvlIpyRVyJw2EHxhooh/pub?output=csv";
+console.log("Loaded pointsURL:", pointsURL);
 
 window.addEventListener("DOMContentLoaded", init);
 
