@@ -28,6 +28,28 @@ function init() {
   map = L.map("map").setView([37.9838, 23.7275], 10);
   console.log(">>> main.js της Αθήνας φορτώθηκε");
 
+  // === Εντοπισμός θέσης χρήστη ===
+map.locate({ setView: true, maxZoom: 14 });
+
+function onLocationFound(e) {
+  const radius = e.accuracy / 2;
+
+  // Δείχνει την πραγματική σου θέση
+  const userMarker = L.marker(e.latlng).addTo(map);
+  userMarker.bindPopup("Βρίσκεσαι εδώ περίπου").openPopup();
+
+  // Κύκλος ακρίβειας
+  L.circle(e.latlng, radius).addTo(map);
+}
+
+function onLocationError(e) {
+  alert("Σφάλμα εντοπισμού: " + e.message);
+}
+
+map.on("locationfound", onLocationFound);
+map.on("locationerror", onLocationError);
+
+
   // This is the Carto Positron basemap
   L.tileLayer(
     "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png",
