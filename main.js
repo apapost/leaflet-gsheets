@@ -6,8 +6,6 @@
  */
 
 // PASTE YOUR URLs HERE
-const geomURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWFhn0ci-adK2ozaTApXmxdphm7vxbnDciZt_JtLsQM4_DqyqlfL0W0OibbCwWyNPnkfHqPo9sBVuf/pub?output=csv";
-const pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQiFVcgL3XVFd9rdu19dYt6qQfNipyMwQ7hb5y1LR_HH6OH02OoahCBU8bw1CvlIpyRVyJw2EHxhooh/pub?output=csv";
 // these URLs come from Google Sheets 'shareable link' form
 // the first is the geometry layer and the second the points
 let geomURL =
