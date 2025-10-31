@@ -6,12 +6,14 @@
  */
 
 // PASTE YOUR URLs HERE
+const geomURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWFhn0ci-adK2ozaTApXmxdphm7vxbnDciZt_JtLsQM4_DqyqlfL0W0OibbCwWyNPnkfHqPo9sBVuf/pub?output=csv";
+const pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQiFVcgL3XVFd9rdu19dYt6qQfNipyMwQ7hb5y1LR_HH6OH02OoahCBU8bw1CvlIpyRVyJw2EHxhooh/pub?output=csv";
 // these URLs come from Google Sheets 'shareable link' form
 // the first is the geometry layer and the second the points
 let geomURL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTsAyA0Hpk_-WpKyN1dfqi5IPEIC3rqEiL-uwElxJpw_U7BYntc8sDw-8sWsL87JCDU4lVg2aNi65ES/pub?output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSWFhn0ci-adK2ozaTApXmxdphm7vxbnDciZt_JtLsQM4_DqyqlfL0W0OibbCwWyNPnkfHqPo9sBVuf/pub?output=csv";
 let pointsURL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSFQw9sVY16eQmN5TIjOH7CUaxeZnl_v6LcdE2goig1pSe9I3hipeOn1sOwmC4fS0AURefRWwcKExct/pub?output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQiFVcgL3XVFd9rdu19dYt6qQfNipyMwQ7hb5y1LR_HH6OH02OoahCBU8bw1CvlIpyRVyJw2EHxhooh/pub?output=csv";
 
 window.addEventListener("DOMContentLoaded", init);
 
