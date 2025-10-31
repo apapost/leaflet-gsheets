@@ -26,6 +26,7 @@ let panelID = "my-info-panel";
 function init() {
   // Create a new Leaflet map centered on the continental US
   map = L.map("map").setView([37.9838, 23.7275], 10);
+  console.log(">>> main.js της Αθήνας φορτώθηκε");
 
   // This is the Carto Positron basemap
   L.tileLayer(
