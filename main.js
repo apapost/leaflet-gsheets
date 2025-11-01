@@ -21,7 +21,7 @@ let sidebar;
 let panelID = "my-info-panel";
 
 var blueIcon = new L.Icon({
-  iconUrl: 'https://githubusercontent.com/pointhi/leaflet-color-markers/blob/master/img/marker-icon-2x-violet.png',
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
   shadowUrl: 'https://githubusercontent.com/pointhi/leaflet-color-markers/blob/master/img/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
