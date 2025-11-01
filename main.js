@@ -20,25 +20,15 @@ let map;
 let sidebar;
 let panelID = "my-info-panel";
 
-var blueIcon = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
-  shadowUrl: 'https://githubusercontent.com/pointhi/leaflet-color-markers/blob/master/img/marker-shadow.png',
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41]
-});
-
 
 /*
  * init() is called when the page has loaded
  */
 function init() {
-  // Create a new Leaflet map centered on the continental US
-  map = L.map("map").setView([37.9838, 23.7275], 10);
-  console.log(">>> main.js της Αθήνας φορτώθηκε");
+  // Create a new Leaflet map centered on the Northest city of Greece
+  map = L.map("map").setView([41.5032, 26.5297], 10);
+  console.log(">>> main.js της Ορεστιάδας φορτώθηκε");
 
-  L.marker([37.9838, 23.7275], { icon: blueIcon }).addTo(map);
 
   // === Εντοπισμός θέσης χρήστη ===
 map.locate({ setView: true, maxZoom: 14 });
