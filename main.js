@@ -22,10 +22,10 @@ let panelID = "my-info-panel";
 
 
 /*
- * init() is called when the page has loaded
+ * Η init() καλείται όταν φορτώνεται η σελίδα
  */
 function init() {
-  // Create a new Leaflet map centered on the Northest city of Greece
+  // Δημιουργία ενός νέου leaflet χάρτη με επίκεντρο την Ορεστιάδα
   map = L.map("map").setView([41.5032, 26.5297], 10);
   console.log(">>> main.js της Ορεστιάδας φορτώθηκε");
 
