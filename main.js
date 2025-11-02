@@ -44,7 +44,7 @@ function init() {
 
 
   // === Εντοπισμός θέσης χρήστη ===
-map.locate({ setView: true, maxZoom: 8 });
+map.locate({ setView: true, maxZoom: 14 });
 
 // Όταν βρεθεί η θέση του χρήστη
 map.on('locationfound', function(e) {
@@ -55,7 +55,7 @@ map.on('locationfound', function(e) {
 
 // Εμφάνιση κύκλου γύρω από τη θέση του χρήστη (χωρική επίγνωση)
 const userCircle = L.circle([userLat, userLng], {
-  radius: 120 * 1000, // ακτίνα σε μέτρα (120 km)
+  radius: 10 * 1000, // ακτίνα σε μέτρα (10 km)
   color: "blue",
   fillColor: "#aaddff",
   fillOpacity: 0.2
@@ -80,8 +80,8 @@ const userCircle = L.circle([userLat, userLng], {
         // Υπολογισμός απόστασης
         const distance = getDistanceFromLatLonInKm(userLat, userLng, lat, lon);
         console.log("Απόσταση:", distance);
-        // Εμφάνιση μόνο σημείων σε ακτίνα 50 km
-        if (distance < 120) {
+        // Εμφάνιση μόνο σημείων σε ακτίνα 10 km
+        if (distance < 10) {
           L.marker([lat, lon], { icon: blueIcon })
             .addTo(map)
             .bindPopup(`<b>${name}</b><br>${info}<br><i>Απόσταση: ${distance.toFixed(1)} km</i>`);
