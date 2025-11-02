@@ -70,14 +70,13 @@ map.on('locationfound', function(e) {
 
         // Υπολογισμός απόστασης
         const distance = getDistanceFromLatLonInKm(userLat, userLng, lat, lon);
-
+        console.log(distance);
         // Εμφάνιση μόνο σημείων σε ακτίνα 50 km
         if (distance < 100) {
           L.marker([lat, lon], { icon: blueIcon })
             .addTo(map)
             .bindPopup(`<b>${name}</b><br>${info}<br><i>Απόσταση: ${distance.toFixed(1)} km</i>`);
         }
-        console.log(distance);
       });
     }
   });
