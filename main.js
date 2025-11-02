@@ -53,6 +53,14 @@ map.on('locationfound', function(e) {
 
   console.log("Θέση χρήστη:", userLat, userLng);
 
+// Εμφάνιση κύκλου γύρω από τη θέση του χρήστη (χωρική επίγνωση)
+L.circle([userLat, userLng], {
+  radius: 120 * 1000, // ακτίνα σε μέτρα (120 km)
+  color: "blue",
+  fillColor: "#aaddff",
+  fillOpacity: 0.2
+}).addTo(map);
+
   // Φόρτωσε τα σημεία από το CSV και φίλτραρε
   Papa.parse(pointsURL, {
     download: true,
