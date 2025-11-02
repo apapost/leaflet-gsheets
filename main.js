@@ -44,7 +44,7 @@ function init() {
 
 
   // === Εντοπισμός θέσης χρήστη ===
-map.locate({ setView: true, maxZoom: 14 });
+map.locate({ setView: true, maxZoom: 8 });
 
 // Όταν βρεθεί η θέση του χρήστη
 map.on('locationfound', function(e) {
