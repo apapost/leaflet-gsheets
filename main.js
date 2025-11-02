@@ -48,8 +48,8 @@ map.locate({ setView: true, maxZoom: 14 });
 
 // Όταν βρεθεί η θέση του χρήστη
 map.on('locationfound', function(e) {
-  const userLat = e.latitude;
-  const userLng = e.longitude;
+  const userLat = e.latlng.lat;
+  const userLng = e.larlng.lng;
 
   console.log("Θέση χρήστη:", userLat, userLng);
 
@@ -70,7 +70,7 @@ map.on('locationfound', function(e) {
         const distance = getDistanceFromLatLonInKm(userLat, userLng, lat, lon);
 
         // Εμφάνιση μόνο σημείων σε ακτίνα 50 km
-        if (distance < 10) {
+        if (distance < 50) {
           L.marker([lat, lon], { icon: blueIcon })
             .addTo(map)
             .bindPopup(`<b>${name}</b><br>${info}<br><i>Απόσταση: ${distance.toFixed(1)} km</i>`);
