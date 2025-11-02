@@ -61,6 +61,7 @@ map.on('locationfound', function(e) {
       const data = results.data;
 
       data.forEach(function(row) {
+        console.log(row);
         const lat = parseFloat(row.Lat);
         const lon = parseFloat(row.Lon);
         const name = row.Name || "Χωρίς όνομα";
@@ -75,6 +76,7 @@ map.on('locationfound', function(e) {
             .addTo(map)
             .bindPopup(`<b>${name}</b><br>${info}<br><i>Απόσταση: ${distance.toFixed(1)} km</i>`);
         }
+        console.log(distance);
       });
     }
   });
