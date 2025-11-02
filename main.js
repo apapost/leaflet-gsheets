@@ -70,7 +70,7 @@ map.on('locationfound', function(e) {
 
         // Υπολογισμός απόστασης
         const distance = getDistanceFromLatLonInKm(userLat, userLng, lat, lon);
-        console.log(distance);
+        console.log("Απόσταση:", distance);
         // Εμφάνιση μόνο σημείων σε ακτίνα 50 km
         if (distance < 100) {
           L.marker([lat, lon], { icon: blueIcon })
