@@ -66,6 +66,7 @@ map.on('locationfound', function(e) {
         const lon = parseFloat(row.Lon);
         const name = row.Name || "Χωρίς όνομα";
         const info = row.Info || "";
+        console.log(row);
 
         // Υπολογισμός απόστασης
         const distance = getDistanceFromLatLonInKm(userLat, userLng, lat, lon);
