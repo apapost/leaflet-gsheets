@@ -70,7 +70,7 @@ map.on('locationfound', function(e) {
         const distance = getDistanceFromLatLonInKm(userLat, userLng, lat, lon);
 
         // Εμφάνιση μόνο σημείων σε ακτίνα 50 km
-        if (distance < 50) {
+        if (distance < 200) {
           L.marker([lat, lon], { icon: blueIcon })
             .addTo(map)
             .bindPopup(`<b>${name}</b><br>${info}<br><i>Απόσταση: ${distance.toFixed(1)} km</i>`);
