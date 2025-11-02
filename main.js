@@ -137,7 +137,7 @@ map.on("locationerror", onLocationError);
 
   // Use PapaParse to load data from Google Sheets
   // And call the respective functions to add those to the map.
-  Papa.parse(geomURL, {
+ /* Papa.parse(geomURL, {
     download: true,
     header: true,
     complete: addGeoms,
@@ -146,7 +146,7 @@ map.on("locationerror", onLocationError);
     download: true,
     header: true,
     complete: addPoints,
-  });
+  }); */
 }
 
 /*
