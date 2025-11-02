@@ -48,8 +48,8 @@ map.locate({ setView: true, maxZoom: 14 });
 
 // Όταν βρεθεί η θέση του χρήστη
 map.on('locationfound', function(e) {
-  const userLat = e.latlng.lat;
-  const userLng = e.larlng.lng;
+  const userLat = e.latitude;
+  const userLng = e.longitude;
 
   console.log("Θέση χρήστη:", userLat, userLng);
 
