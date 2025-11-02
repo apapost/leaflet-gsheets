@@ -46,6 +46,45 @@ function init() {
   // === Εντοπισμός θέσης χρήστη ===
 map.locate({ setView: true, maxZoom: 14 });
 
+// Όταν βρεθεί η θέση του χρήστη
+map.on('locationfound', function(e) {
+  const userLat = e.latitude;
+  const userLng = e.longitude;
+
+  console.log("Θέση χρήστη:", userLat, userLng);
+
+  // Φόρτωσε τα σημεία από το CSV και φίλτραρε
+  Papa.parse(pointsURL, {
+    download: true,
+    header: true,
+    complete: function(results) {
+      const data = results.data;
+
+      data.forEach(function(row) {
+        const lat = parseFloat(row.Lat);
+        const lon = parseFloat(row.Lon);
+        const name = row.Name || "Χωρίς όνομα";
+        const info = row.Info || "";
+
+        // Υπολογισμός απόστασης
+        const distance = getDistanceFromLatLonInKm(userLat, userLng, lat, lon);
+
+        // Εμφάνιση μόνο σημείων σε ακτίνα 50 km
+        if (distance < 50) {
+          L.marker([lat, lon], { icon: blueIcon })
+            .addTo(map)
+            .bindPopup(`<b>${name}</b><br>${info}<br><i>Απόσταση: ${distance.toFixed(1)} km</i>`);
+        }
+      });
+    }
+  });
+});
+
+// Αν αποτύχει ο εντοπισμός
+map.on('locationerror', function(e) {
+  alert("Δεν ήταν δυνατός ο εντοπισμός θέσης.");
+});
+
 function onLocationFound(e) {
   const radius = e.accuracy / 2;
 
