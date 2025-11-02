@@ -104,7 +104,7 @@ function onLocationFound(e) {
   userMarker.bindPopup("Βρίσκεσαι εδώ περίπου").openPopup();
 
   // Κύκλος ακρίβειας
-  //L.circle(e.latlng, radius).addTo(map);
+  L.circle(e.latlng, radius).addTo(map);
 }
 
 function onLocationError(e) {
